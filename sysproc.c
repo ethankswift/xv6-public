@@ -89,3 +89,10 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+// return the number of system calls made since boot
+int
+sys_getsyscallinfo(void)
+{ 
+  return num_syscalls;
+}
